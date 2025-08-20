@@ -20,7 +20,6 @@ It consumes data from [PokeAPI](https://pokeapi.co/) and provides a fast, ad‑f
 - 📦 **Caching** (in‑memory) + **request cancellation** via `AbortController`
 - 📱 Responsive layout, keyboard‑and‑screen‑reader friendly
 - ⚡ **Vite** dev server & **Tailwind v4** modern design tokens
-- 🚀 Optional **GitHub Pages** deployment
 
 ---
 
@@ -98,7 +97,7 @@ pokedex/
     "deploy": "gh-pages -d dist"
   }
 }
-
+```
 ## 🧱 Accessibility & UX
 
 - Logical heading order and focus rings for keyboard navigation

@@ -46,7 +46,7 @@ It consumes data from [PokeAPI](https://pokeapi.co/) and provides a fast, ad‑f
 
 Clone and install dependencies:
 ```bash
-git clone [<your-repo-url>](https://github.com/nottoezz/Pok-dex) pokedex
+git clone https://github.com/nottoezz/Pok-dex pokedex
 cd pokedex
 npm i
 ```

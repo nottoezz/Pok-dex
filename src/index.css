@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Tailwind v4: light theming tokens you can tweak */
+@theme {
+  --radius: 1rem;
+  --shadow: 0 10px 30px -10px rgba(0,0,0,.25);
+}
+
+/* ---- Retro/OG screen vibes ---- */
+.pokedex-bg {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 1px) 0 0/12px 12px,
+    linear-gradient(180deg, rgba(255,255,255,.05), rgba(0,0,0,.25)),
+    #0b0b0b;
+}
+
+/* light mode variant */
+@media (prefers-color-scheme: light) {
+  .pokedex-bg {
+    background:
+      radial-gradient(circle at 1px 1px, rgba(0,0,0,0.06) 1px, transparent 1px) 0 0/12px 12px,
+      linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.06)),
+      #fafafa;
+  }
+}
+
+/* scanline overlay */
+.theme-crt {
+  position: relative;
+  isolation: isolate;
+}
+.theme-crt::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  opacity: .6;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,0,0,.045) 0px,
+    rgba(0,0,0,.045) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+}
+
+/* optional: crisp sprites when scaled */
+.sprite-pixel {
+  image-rendering: pixelated;
+}

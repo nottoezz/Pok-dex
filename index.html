@@ -2,12 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/pokeball.svg" />
+    <script type="module">
+      const link = document.createElement('link');
+      link.rel = 'icon';
+      link.type = 'image/svg+xml';
+      link.href = import.meta.env.BASE_URL + 'pokeball.svg';
+      document.head.appendChild(link);
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedéx</title>
+    <title>Pokédex</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module">
+      import './src/main.jsx';
+    </script>
   </body>
 </html>
